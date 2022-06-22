@@ -1,0 +1,24 @@
+{
+  "name": "proyectofinalv1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass":"node-sass --include-path scss sass/index.scss css/translated.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pabloinf2022/Proyecto_FinalV1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pabloinf2022/Proyecto_FinalV1/issues"
+  },
+  "homepage": "https://github.com/Pabloinf2022/Proyecto_FinalV1#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
