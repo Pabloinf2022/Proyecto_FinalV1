@@ -21,11 +21,11 @@ a {
 }
 
 .contenedor {
-	width: 90%;
+	width: 93%;
 	max-width: 1200px;
-	margin: 20px auto;
+	margin: 15px auto;
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 15px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(4, auto);
 	grid-template-areas:
@@ -39,15 +39,15 @@ a {
 .contenedor2 {
 	width: 90%;
 	max-width: 1200px;
-	margin: 20px auto;
+	margin: 15px auto;
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 15px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(4, auto);
 	grid-template-areas:
 		'header			header   	header'
 		'destacado		destacado 	destacado'
-		'contenido		contenido 	contenido'
+		'contenido		contenido 	contenido2'
 		'footer	 		footer 		footer';
 
 }
@@ -106,6 +106,7 @@ a {
 
 /* ---------- Articulos ----------*/
 .articulo {
+	
 	display: flex;
 	background: #fff;
 	box-shadow: 100px 0px 70px rgba(102, 102, 102, 0.2);
@@ -123,15 +124,16 @@ a {
 
 .articulo .contenedor-thumbnail {
 	width: 100%;
+	
 }
 
 .articulo .titulo {
 	margin-bottom: 10px;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 .articulo .titulo a {
-	font-weight: 400;
+	font-weight: 300;
 	color: #000;
 }
 
@@ -158,7 +160,7 @@ a {
 
 	display: grid;
 	grid-template-columns: 1.3fr 1fr;
-	grid-gap: 1px; 
+	grid-gap: 5px; 
 }
 
 .articulo.destacado .contenedor-thumbnail {
@@ -221,7 +223,7 @@ a {
 /*---------- SIDEBAR ----------*/
  .sidebar {
 	padding: 5em 25px; 
-	text-align: center;
+	text-align: justify;
 	min-height: 60px; 
 	grid-area: aside;
 	background: #000;
@@ -235,7 +237,7 @@ a {
 	border-radius: 100%;
 	height: 10em; 
 	width: 10em; 
-	margin-bottom: 15px; 
+	margin-bottom: 50px; 
 	text-align: center;
 }
 
@@ -252,7 +254,7 @@ a {
 }
 
 .sidebar .menu a {
-	padding: 25px; 
+	padding: 5px; 
 	color: #fff;
 	background-color: #000;
 	display: block;
@@ -298,3 +300,86 @@ a {
         border: 0.06em solid rgba(192, 40, 40, 0.8) } 
     .div17 { grid-area: 1 / 6 / 2 / 7;
         border: 0.06em solid rgba(192, 40, 40, 0.8) } 
+
+
+/* -------------------Imagenes-------------------- */
+
+
+
+
+		body {
+			padding: 20px;
+			font-family: sans-serif;
+			background: #f2f2f2;
+		  }
+		  img {
+			width: 100%; /* need to overwrite inline dimensions */
+			height: auto;
+		  }
+		  h2 {
+			margin-bottom: .5em;
+		  }
+		  .grid-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			grid-gap: 1em;
+		  }
+		  
+		  
+		  /* hover styles */
+		  .location-listing {
+			position: relative;
+		  }
+		  
+		  .location-image {
+			line-height: 0;
+			overflow: hidden;
+		  }
+		  
+		  .location-image img {
+			filter: blur(0px);
+			transition: filter 0.3s ease-in;
+			transform: scale(1.1);
+		  }
+		  
+		  .location-title {
+			font-size: 1.5em;
+			font-weight: bold;
+			text-decoration: none;
+			z-index: 1;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: opacity .5s;
+			background: rgba(90,0,10,0.4);
+			color: white;
+			
+			/* position the text in t’ middle*/
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		  }
+		  
+		  .location-listing:hover .location-title {
+			opacity: 1;
+		  }
+		  
+		  .location-listing:hover .location-image img {
+			filter: blur(2px);
+		  }
+		  
+		  
+		  /* for touch screen devices */
+		  @media (hover: none) { 
+			.location-title {
+			  opacity: 1;
+			}
+			.location-image img {
+			  filter: blur(2px);
+			}
+		  }
+		  
+		  
