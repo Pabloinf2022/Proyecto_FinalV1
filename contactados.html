@@ -25,10 +25,25 @@
 				</nav>
 			</header>
 
-			<main>
-				<embed src="img\Bases.pdf" width="1100" height="3000" frameborder="100" allowfullscreen>
-			  
-			  </main>
+			<form action="#" target="" method="get" name="formDatosPersonales">
+
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+			
+				<label for="apellidos">Apellidos</label>
+				<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"/>
+			
+				<label for="email" />Email</label>
+				<input type="email" name="email" id="email" placeholder="email" required />
+			
+				<label for="asunto">Asunto</label>
+				<input type ="text" name="asunto" id="asunto" placeholder="Titulo"/>
+			
+				<label for="mensaje">Mensaje</label>
+				<textarea name="mensaje" for="mensaje" placeholder="Ingrese su consulta" maxlength="300"></textarea>
+				
+				<input type="submit" name="enviar" value="Enviar datos"/>
+			</form>
 
 			
 
